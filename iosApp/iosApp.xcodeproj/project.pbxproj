@@ -3,41 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 60;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		92C58E1E2DF87863004F1926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58E1D2DF87863004F1926 /* ContentView.swift */; };
+		92C58E202DF87864004F1926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C58E1F2DF87864004F1926 /* Assets.xcassets */; };
+		92C58E232DF87864004F1926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C58E222DF87864004F1926 /* Preview Assets.xcassets */; };
+		92C58E2E2DF879DD004F1926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C58E292DF879DD004F1926 /* Preview Assets.xcassets */; };
+		92C58E302DF879DD004F1926 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C58E2C2DF879DD004F1926 /* iOSApp.swift */; };
+		92C58E312DF879DD004F1926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C58E2D2DF879DD004F1926 /* Assets.xcassets */; };
+		92C58E332DF87CEF004F1926 /* Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92C58E322DF87CEF004F1926 /* Info1.plist */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		B9DA97B12DC1472C00A4DA20 /* RSAChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSAChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C58E182DF87863004F1926 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C58E1D2DF87863004F1926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92C58E1F2DF87864004F1926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92C58E222DF87864004F1926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92C58E292DF879DD004F1926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92C58E2B2DF879DD004F1926 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92C58E2C2DF879DD004F1926 /* iOSApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		92C58E2D2DF879DD004F1926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92C58E322DF87CEF004F1926 /* Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info1.plist; path = "../../../../Downloads/Telegram Desktop/RSAChat-master/Info1.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "iosApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = B9DA97B02DC1472C00A4DA20 /* iosApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B9DA97B32DC1472C00A4DA20 /* iosApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "iosApp" target */,
-			);
-			path = iosApp;
-			sourceTree = "<group>";
-		};
-		B9DA98002DC14AA900A4DA20 /* Configuration */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		B9DA97AE2DC1472C00A4DA20 /* Frameworks */ = {
+		92C58E152DF87863004F1926 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,127 +39,136 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9DA97A82DC1472C00A4DA20 = {
+		92C58E0F2DF87863004F1926 = {
 			isa = PBXGroup;
 			children = (
-				B9DA98002DC14AA900A4DA20 /* Configuration */,
-				B9DA97B32DC1472C00A4DA20 /* iosApp */,
-				B9DA97B22DC1472C00A4DA20 /* Products */,
+				92C58E2A2DF879DD004F1926 /* Preview Content */,
+				92C58E1A2DF87863004F1926 /* iosApp */,
+				92C58E192DF87863004F1926 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B9DA97B22DC1472C00A4DA20 /* Products */ = {
+		92C58E192DF87863004F1926 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9DA97B12DC1472C00A4DA20 /* RSAChat.app */,
+				92C58E182DF87863004F1926 /* iosApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		92C58E1A2DF87863004F1926 /* iosApp */ = {
+			isa = PBXGroup;
+			children = (
+				92C58E322DF87CEF004F1926 /* Info1.plist */,
+				92C58E2D2DF879DD004F1926 /* Assets.xcassets */,
+				92C58E2B2DF879DD004F1926 /* Info.plist */,
+				92C58E2C2DF879DD004F1926 /* iOSApp.swift */,
+				92C58E1D2DF87863004F1926 /* ContentView.swift */,
+				92C58E1F2DF87864004F1926 /* Assets.xcassets */,
+				92C58E212DF87864004F1926 /* Preview Content */,
+			);
+			path = iosApp;
+			sourceTree = "<group>";
+		};
+		92C58E212DF87864004F1926 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				92C58E222DF87864004F1926 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92C58E2A2DF879DD004F1926 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				92C58E292DF879DD004F1926 /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "iosApp/Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9DA97B02DC1472C00A4DA20 /* iosApp */ = {
+		92C58E172DF87863004F1926 /* iosApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9DA97BF2DC1472D00A4DA20 /* Build configuration list for PBXNativeTarget "iosApp" */;
+			buildConfigurationList = 92C58E262DF87864004F1926 /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
-				B9DA97F42DC1497100A4DA20 /* Compile Kotlin Framework */,
-				B9DA97AD2DC1472C00A4DA20 /* Sources */,
-				B9DA97AE2DC1472C00A4DA20 /* Frameworks */,
-				B9DA97AF2DC1472C00A4DA20 /* Resources */,
+				92C58E142DF87863004F1926 /* Sources */,
+				92C58E152DF87863004F1926 /* Frameworks */,
+				92C58E162DF87863004F1926 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				B9DA97B32DC1472C00A4DA20 /* iosApp */,
-			);
 			name = iosApp;
-			packageProductDependencies = (
-			);
 			productName = iosApp;
-			productReference = B9DA97B12DC1472C00A4DA20 /* RSAChat.app */;
+			productReference = 92C58E182DF87863004F1926 /* iosApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B9DA97A92DC1472C00A4DA20 /* Project object */ = {
+		92C58E102DF87863004F1926 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					B9DA97B02DC1472C00A4DA20 = {
-						CreatedOnToolsVersion = 16.2;
+					92C58E172DF87863004F1926 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = B9DA97AC2DC1472C00A4DA20 /* Build configuration list for PBXProject "iosApp" */;
+			buildConfigurationList = 92C58E132DF87863004F1926 /* Build configuration list for PBXProject "iosApp" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = B9DA97A82DC1472C00A4DA20;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = B9DA97B22DC1472C00A4DA20 /* Products */;
+			mainGroup = 92C58E0F2DF87863004F1926;
+			productRefGroup = 92C58E192DF87863004F1926 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9DA97B02DC1472C00A4DA20 /* iosApp */,
+				92C58E172DF87863004F1926 /* iosApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B9DA97AF2DC1472C00A4DA20 /* Resources */ = {
+		92C58E162DF87863004F1926 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C58E232DF87864004F1926 /* Preview Assets.xcassets in Resources */,
+				92C58E2E2DF879DD004F1926 /* Preview Assets.xcassets in Resources */,
+				92C58E202DF87864004F1926 /* Assets.xcassets in Resources */,
+				92C58E332DF87CEF004F1926 /* Info1.plist in Resources */,
+				92C58E312DF879DD004F1926 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		B9DA97F42DC1497100A4DA20 /* Compile Kotlin Framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Kotlin Framework";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		B9DA97AD2DC1472C00A4DA20 /* Sources */ = {
+		92C58E142DF87863004F1926 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C58E1E2DF87863004F1926 /* ContentView.swift in Sources */,
+				92C58E302DF879DD004F1926 /* iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B9DA97BD2DC1472D00A4DA20 /* Debug */ = {
+		92C58E242DF87864004F1926 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -204,7 +205,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -219,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -230,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		B9DA97BE2DC1472D00A4DA20 /* Release */ = {
+		92C58E252DF87864004F1926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -267,7 +268,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -276,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -286,22 +287,15 @@
 			};
 			name = Release;
 		};
-		B9DA97C02DC1472D00A4DA20 /* Debug */ = {
+		92C58E272DF87864004F1926 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = B9DA98002DC14AA900A4DA20 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\n$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
-				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -313,28 +307,24 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.kekus.rsachat.iosApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B9DA97C12DC1472D00A4DA20 /* Release */ = {
+		92C58E282DF87864004F1926 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = B9DA98002DC14AA900A4DA20 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\n$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
-				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -346,6 +336,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.kekus.rsachat.iosApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,25 +348,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9DA97AC2DC1472C00A4DA20 /* Build configuration list for PBXProject "iosApp" */ = {
+		92C58E132DF87863004F1926 /* Build configuration list for PBXProject "iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9DA97BD2DC1472D00A4DA20 /* Debug */,
-				B9DA97BE2DC1472D00A4DA20 /* Release */,
+				92C58E242DF87864004F1926 /* Debug */,
+				92C58E252DF87864004F1926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9DA97BF2DC1472D00A4DA20 /* Build configuration list for PBXNativeTarget "iosApp" */ = {
+		92C58E262DF87864004F1926 /* Build configuration list for PBXNativeTarget "iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9DA97C02DC1472D00A4DA20 /* Debug */,
-				B9DA97C12DC1472D00A4DA20 /* Release */,
+				92C58E272DF87864004F1926 /* Debug */,
+				92C58E282DF87864004F1926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B9DA97A92DC1472C00A4DA20 /* Project object */;
+	rootObject = 92C58E102DF87863004F1926 /* Project object */;
 }
