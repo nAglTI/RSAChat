@@ -59,7 +59,7 @@ kotlin {
             implementation(libs.decompose.compose)
             implementation(libs.koin.core)
             implementation(libs.essenty.lifecycle)
-            implementation(libs.kotlinx.parcelize)
+            implementation(libs.essenty.backhandler)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

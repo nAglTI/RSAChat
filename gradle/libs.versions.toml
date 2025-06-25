@@ -37,6 +37,7 @@ kotlinx-parcelize = { module = "org.jetbrains.kotlin:kotlin-parcelize-runtime", 
 decompose-core = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 decompose-compose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose" }
 essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "essenty" }
+essenty-backhandler = { module = "com.arkivanov.essenty:back-handler", version.ref = "essenty" }
 arkivanov-parcelize-runtime = { module = "com.arkivanov.parcelize.darwin:runtime", version.ref = "arkivanovParcelize" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 

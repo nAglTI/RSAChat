@@ -2,6 +2,7 @@ package org.kekus.rsachat
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.addCallback
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
@@ -14,6 +15,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         initKoin()
+
+        onBackPressedDispatcher.addCallback(this) {
+            RootComponentHolder.backDispatcher.back()
+        }
 
         setContent {
             App()

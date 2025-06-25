@@ -22,14 +22,18 @@ fun App() {
         when (screen) {
             Screen.Password -> PasswordScreen(onSubmit = component::tryUnlock)
             Screen.ChatList -> ChatListScreen(onOpenSettings = component::openSettings)
-            Screen.Settings -> SettingsScreen(
-                onBack = component::backFromSettings,
-                onChangePassword = component::openChangePassword
-            )
-            Screen.ChangePassword -> ChangePasswordScreen(
-                onBack = component::backFromChangePassword,
-                onSave = component::setPassword
-            )
+            Screen.Settings -> {
+                SettingsScreen(
+                    onBack = component::backFromSettings,
+                    onChangePassword = component::openChangePassword
+                )
+            }
+            Screen.ChangePassword -> {
+                ChangePasswordScreen(
+                    onBack = component::backFromChangePassword,
+                    onSave = component::setPassword
+                )
+            }
         }
     }
 }
