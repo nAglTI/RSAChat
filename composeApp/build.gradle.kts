@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
-    id("kotlin-parcelize")
+    alias(libs.plugins.kotlinParcelize)
     alias(libs.plugins.arkivanovParcelize)
 }
 
@@ -59,6 +59,7 @@ kotlin {
             implementation(libs.decompose.compose)
             implementation(libs.koin.core)
             implementation(libs.essenty.lifecycle)
+            implementation(libs.kotlinx.parcelize)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
