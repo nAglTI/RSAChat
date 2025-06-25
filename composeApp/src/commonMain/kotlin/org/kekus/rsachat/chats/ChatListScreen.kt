@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -58,7 +59,7 @@ fun ChatListScreen(
                     selected = true,
                     onClick = {},
                     label = { Text("Chats") },
-                    icon = { }
+                    icon = { Icon(Icons.Default.ChatBubble, null) }
                 )
             }
         }

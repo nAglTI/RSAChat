@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 /** Screen with application settings. */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(onBack: () -> Unit, onChangePassword: () -> Unit) {
     Scaffold(
@@ -29,10 +30,10 @@ fun SettingsScreen(onBack: () -> Unit, onChangePassword: () -> Unit) {
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding)) {
             item {
                 ListItem(
-                    headlineText = { Text("Change password") },
+                    headlineContent = { Text("Change password") },
                     modifier = Modifier.clickable(onClick = onChangePassword)
                 )
-                Divider()
+                HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
             }
         }
     }

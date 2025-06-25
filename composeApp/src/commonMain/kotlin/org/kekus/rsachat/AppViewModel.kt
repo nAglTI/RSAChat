@@ -15,6 +15,7 @@ class AppViewModel : ViewModel() {
     private val _screen = MutableStateFlow<Screen>(Screen.Password)
     val screen: StateFlow<Screen> = _screen.asStateFlow()
 
+    // TODO: change to worker, started after onPause
     private var lockJob: Job? = null
 
     fun tryUnlock(code: String) {
@@ -70,6 +71,7 @@ class AppViewModel : ViewModel() {
 }
 
 /** Holder to access [AppViewModel] from platform-specific code. */
+// FIXME: mb use another strategy to handle app events
 object AppViewModelHolder {
     val viewModel = AppViewModel()
 }

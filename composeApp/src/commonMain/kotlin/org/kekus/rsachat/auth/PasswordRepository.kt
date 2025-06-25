@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-/** Simple in-memory repository for storing the application password. */
+// TODO: change to set|get password interactor + PasswordRepository class
 object PasswordRepository {
     private val _password = MutableStateFlow<String?>(null)
 
