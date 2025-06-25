@@ -7,6 +7,8 @@ import kotlinx.coroutines.flow.asStateFlow
 
 /** ViewModel for the chat list screen. */
 class ChatListViewModel : ViewModel() {
+
+    // TODO: replace to states with chats list or empty banner
     private val _chats = MutableStateFlow(sampleChats())
     val chats: StateFlow<List<Chat>> = _chats.asStateFlow()
 
