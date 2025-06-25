@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 /**
  * Main screen displaying list of chats with bottom navigation and menu.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChatListScreen(
     onOpenSettings: () -> Unit,
@@ -65,10 +66,10 @@ fun ChatListScreen(
         LazyColumn(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
             items(chats) { chat ->
                 ListItem(
-                    headlineText = { Text(chat.title) },
-                    supportingText = { Text(chat.lastMessage) }
+                    headlineContent = { Text(chat.title) },
+                    supportingContent = { Text(chat.lastMessage) }
                 )
-                Divider()
+                HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
             }
         }
     }
