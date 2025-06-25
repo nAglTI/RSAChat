@@ -18,19 +18,20 @@ fun App() {
     val stack by component.childStack.subscribeAsState()
     val screen = stack.active.instance
 
+    // TODO: remove callbacks (onBack, etc.), use ViewModels
     MaterialTheme {
         when (screen) {
             Screen.Password -> PasswordScreen(onSubmit = component::tryUnlock)
             Screen.ChatList -> ChatListScreen(onOpenSettings = component::openSettings)
             Screen.Settings -> {
                 SettingsScreen(
-                    onBack = component::backFromSettings,
+                    onBack = component::back,
                     onChangePassword = component::openChangePassword
                 )
             }
             Screen.ChangePassword -> {
                 ChangePasswordScreen(
-                    onBack = component::backFromChangePassword,
+                    onBack = component::back,
                     onSave = component::setPassword
                 )
             }
