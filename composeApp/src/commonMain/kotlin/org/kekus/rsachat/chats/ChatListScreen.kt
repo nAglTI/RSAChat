@@ -24,7 +24,7 @@ fun ChatListScreen(
 
     Scaffold(
         topBar = {
-            SmallTopAppBar(
+            TopAppBar(
                 title = { Text("Chats") },
                 actions = {
                     Box {
