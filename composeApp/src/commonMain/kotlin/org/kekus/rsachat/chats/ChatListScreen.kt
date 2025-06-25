@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
  */
 @Composable
 fun ChatListScreen(
+    onOpenSettings: () -> Unit,
     viewModel: ChatListViewModel = remember { ChatListViewModel() }
 ) {
     val chats by viewModel.chats.collectAsState()
@@ -38,7 +39,13 @@ fun ChatListScreen(
                             expanded = menuExpanded,
                             onDismissRequest = { menuExpanded = false }
                         ) {
-                            DropdownMenuItem(text = { Text("Settings") }, onClick = { menuExpanded = false })
+                            DropdownMenuItem(
+                                text = { Text("Settings") },
+                                onClick = {
+                                    menuExpanded = false
+                                    onOpenSettings()
+                                }
+                            )
                         }
                     }
                 }
