@@ -1,12 +1,14 @@
 package org.kekus.rsachat
 
 import com.arkivanov.decompose.ComponentContext
+import com.arkivanov.decompose.DelicateDecomposeApi
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.bringToFront
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.push
+import com.arkivanov.decompose.router.stack.replaceCurrent
 import com.arkivanov.decompose.value.Value
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -28,7 +30,7 @@ class RootComponent(
         source = navigation,
         serializer = null,
         initialConfiguration = Screen.Password,
-        handleBackButton = true,
+        handleBackButton = true
     ) { config, _ -> config }
 
     private var lockJob: Job? = null
@@ -41,8 +43,12 @@ class RootComponent(
     }
 
     fun unlock() {
-        navigation.bringToFront(Screen.ChatList)
-        startLockTimer()
+        navigation.pop { popped ->
+            if (!popped) {
+                navigation.replaceCurrent(Screen.ChatList)
+            }
+            startLockTimer()
+        }
     }
 
     fun lock() {
@@ -58,12 +64,8 @@ class RootComponent(
         navigation.bringToFront(Screen.ChangePassword)
     }
 
-    fun backFromSettings() {
-        navigation.bringToFront(Screen.ChatList)
-    }
-
-    fun backFromChangePassword() {
-        navigation.bringToFront(Screen.Settings)
+    fun back() {
+        navigation.pop()
     }
 
     fun setPassword(newPassword: String) {

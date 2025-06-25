@@ -9,15 +9,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import org.kekus.rsachat.RootComponentHolder
 import org.kekus.rsachat.di.initKoin
+import org.koin.core.context.GlobalContext
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
-        initKoin()
+        if (GlobalContext.getOrNull() == null) initKoin()
 
         onBackPressedDispatcher.addCallback(this) {
-            RootComponentHolder.backDispatcher.back()
+            if (!RootComponentHolder.backDispatcher.back()) {
+                finish()
+            }
         }
 
         setContent {
@@ -28,6 +31,11 @@ class MainActivity : ComponentActivity() {
     override fun onPause() {
         super.onPause()
         RootComponentHolder.component.lock()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
     }
 }
 
