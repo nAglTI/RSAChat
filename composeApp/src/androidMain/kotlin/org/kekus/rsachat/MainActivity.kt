@@ -32,11 +32,6 @@ class MainActivity : ComponentActivity() {
         super.onPause()
         RootComponentHolder.component.lock()
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-    }
 }
 
 @Preview
