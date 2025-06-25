@@ -1,6 +1,7 @@
 package org.kekus.rsachat
 
 import com.arkivanov.decompose.ComponentContext
+import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.bringToFront
 import com.arkivanov.decompose.router.stack.childStack
@@ -23,8 +24,9 @@ class RootComponent(
     private val navigation = StackNavigation<Screen>()
 
     /** Stack of application screens. */
-    val childStack: Value<com.arkivanov.decompose.router.stack.ChildStack<Screen, Screen>> = childStack(
+    val childStack: Value<ChildStack<Screen, Screen>> = childStack(
         source = navigation,
+        serializer = null,
         initialConfiguration = Screen.Password,
         handleBackButton = true,
     ) { config, _ -> config }

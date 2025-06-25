@@ -1,8 +1,5 @@
 package org.kekus.rsachat
 
-import com.arkivanov.essenty.parcelable.Parcelize
-import com.arkivanov.essenty.parcelable.Parcelable
-
 /** Screens available in the application. */
 @Parcelize
 sealed class Screen : Parcelable {

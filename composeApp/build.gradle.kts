@@ -8,7 +8,8 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
-    alias(libs.plugins.kotlinParcelize)
+    id("kotlin-parcelize")
+    alias(libs.plugins.arkivanovParcelize)
 }
 
 kotlin {
@@ -27,6 +28,10 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+
+            export(libs.decompose.core)
+            export(libs.essenty.lifecycle)
+            export(libs.arkivanov.parcelize.runtime)
         }
     }
     
@@ -34,6 +39,7 @@ kotlin {
     
     sourceSets {
         val desktopMain by getting
+        val commonMain by getting
         
         androidMain.dependencies {
             implementation(compose.preview)
@@ -52,6 +58,7 @@ kotlin {
             implementation(libs.decompose.core)
             implementation(libs.decompose.compose)
             implementation(libs.koin.core)
+            implementation(libs.essenty.lifecycle)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -59,6 +66,24 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+        }
+
+        iosMain {
+            dependsOn(commonMain)
+            dependencies {
+                api(libs.arkivanov.parcelize.runtime)
+            }
+        }
+
+        val iosMain by getting
+        iosX64Main {
+            dependsOn(iosMain)
+        }
+        iosArm64Main {
+            dependsOn(iosMain)
+        }
+        iosSimulatorArm64Main {
+            dependsOn(iosMain)
         }
     }
 }
