@@ -28,7 +28,7 @@ fun App() {
                 onOpenChat = component::openChat
             )
             is Screen.Chat -> ChatScreen(
-                chat = screen.chat,
+                chatUI = screen.chatUI,
                 onBack = component::back,
                 onForward = {},
                 onReply = {},

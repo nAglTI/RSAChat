@@ -6,15 +6,15 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 /** ViewModel managing messages within a chat. */
-class ChatViewModel(private val chat: Chat) : ViewModel() {
+class ChatViewModel(private val chatUI: ChatUI) : ViewModel() {
 
     private val _messages = MutableStateFlow(sampleMessages())
-    val messages: StateFlow<List<ChatMessage>> = _messages.asStateFlow()
+    val messages: StateFlow<List<ChatMessageUI>> = _messages.asStateFlow()
 
     fun sendMessage(text: String) {
         val list = _messages.value.toMutableList()
         val id = (list.maxOfOrNull { it.id } ?: 0L) + 1
-        list += ChatMessage(id, 0, "Me", text, isMine = true)
+        list += ChatMessageUI(id, 0, "Me", text, isMine = true)
         _messages.value = list
     }
 
@@ -22,7 +22,7 @@ class ChatViewModel(private val chat: Chat) : ViewModel() {
         _messages.value = _messages.value.filterNot { it.id == id }
     }
 
-    private fun sampleMessages(): List<ChatMessage> = listOf(
-        ChatMessage(1, 1, chat.title, chat.lastMessage, isMine = false)
+    private fun sampleMessages(): List<ChatMessageUI> = listOf(
+        ChatMessageUI(1, 1, chatUI.title, chatUI.lastMessage, isMine = false)
     )
 }

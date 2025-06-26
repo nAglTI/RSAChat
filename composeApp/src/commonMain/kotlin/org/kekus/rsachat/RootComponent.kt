@@ -1,13 +1,11 @@
 package org.kekus.rsachat
 
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.decompose.DelicateDecomposeApi
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.bringToFront
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.router.stack.pop
-import com.arkivanov.decompose.router.stack.push
 import com.arkivanov.decompose.router.stack.replaceCurrent
 import com.arkivanov.decompose.value.Value
 import kotlinx.coroutines.CoroutineScope
@@ -15,6 +13,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.kekus.rsachat.auth.PasswordRepository
+import org.kekus.rsachat.chats.ChatUI
 
 /** Root component managing navigation using Decompose. */
 class RootComponent(
@@ -60,8 +59,8 @@ class RootComponent(
         navigation.bringToFront(Screen.Settings)
     }
 
-    fun openChat(chat: chats.Chat) {
-        navigation.bringToFront(Screen.Chat(chat))
+    fun openChat(chatUI: ChatUI) {
+        navigation.bringToFront(Screen.Chat(chatUI))
     }
 
     fun openChangePassword() {

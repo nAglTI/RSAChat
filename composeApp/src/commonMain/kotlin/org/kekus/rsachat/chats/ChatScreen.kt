@@ -23,17 +23,17 @@ import androidx.compose.ui.unit.sp
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChatScreen(
-    chat: Chat,
+    chatUI: ChatUI,
     onBack: () -> Unit,
-    onForward: (ChatMessage) -> Unit,
-    onReply: (ChatMessage) -> Unit,
-    onDelete: (ChatMessage) -> Unit,
-    viewModel: ChatViewModel = remember { ChatViewModel(chat) }
+    onForward: (ChatMessageUI) -> Unit,
+    onReply: (ChatMessageUI) -> Unit,
+    onDelete: (ChatMessageUI) -> Unit,
+    viewModel: ChatViewModel = remember { ChatViewModel(chatUI) }
 ) {
     val messages by viewModel.messages.collectAsState()
     var input by remember { mutableStateOf("") }
     var showAttach by remember { mutableStateOf(false) }
-    var menuForMessage by remember { mutableStateOf<ChatMessage?>(null) }
+    var menuForMessage by remember { mutableStateOf<ChatMessageUI?>(null) }
 
     Scaffold(
         topBar = {
@@ -43,7 +43,7 @@ fun ChatScreen(
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back")
                     }
                 },
-                title = { Text(chat.title) }
+                title = { Text(chatUI.title) }
             )
         }
     ) { padding ->
@@ -60,7 +60,7 @@ fun ChatScreen(
                     )
                 }
             }
-            Divider()
+            HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
             Row(
                 modifier = Modifier.fillMaxWidth().padding(8.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -117,7 +117,7 @@ fun ChatScreen(
 }
 
 @Composable
-private fun MessageBubble(message: ChatMessage, onLongPress: () -> Unit) {
+private fun MessageBubble(message: ChatMessageUI, onLongPress: () -> Unit) {
     Column(
         horizontalAlignment = if (message.isMine) Alignment.End else Alignment.Start,
         modifier = Modifier

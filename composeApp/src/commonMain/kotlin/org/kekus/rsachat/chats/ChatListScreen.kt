@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun ChatListScreen(
     onOpenSettings: () -> Unit,
-    onOpenChat: (Chat) -> Unit,
+    onOpenChat: (ChatUI) -> Unit,
     viewModel: ChatListViewModel = remember { ChatListViewModel() }
 ) {
     val chats by viewModel.chats.collectAsState()

@@ -1,5 +1,7 @@
 package org.kekus.rsachat
 
+import org.kekus.rsachat.chats.ChatUI
+
 /** Screens available in the application. */
 
 sealed class Screen {
@@ -7,7 +9,7 @@ sealed class Screen {
 
     object ChatList : Screen()
 
-    data class Chat(val chat: chats.Chat) : Screen()
+    data class Chat(val chatUI: ChatUI) : Screen()
 
     object Settings : Screen()
 
