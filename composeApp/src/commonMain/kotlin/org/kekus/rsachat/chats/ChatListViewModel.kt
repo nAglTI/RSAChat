@@ -10,11 +10,11 @@ class ChatListViewModel : ViewModel() {
 
     // TODO: replace to states with chats list or empty banner
     private val _chats = MutableStateFlow(sampleChats())
-    val chats: StateFlow<List<Chat>> = _chats.asStateFlow()
+    val chats: StateFlow<List<ChatUI>> = _chats.asStateFlow()
 
-    private fun sampleChats(): List<Chat> = listOf(
-        Chat(1, "Alice", "Hey, how's it going?"),
-        Chat(2, "Bob", "Let's meet tomorrow."),
-        Chat(3, "Charlie", "See you soon!")
+    private fun sampleChats(): List<ChatUI> = listOf(
+        ChatUI(1, "Alice", "Hey, how's it going?"),
+        ChatUI(2, "Bob", "Let's meet tomorrow."),
+        ChatUI(3, "Charlie", "See you soon!")
     )
 }
