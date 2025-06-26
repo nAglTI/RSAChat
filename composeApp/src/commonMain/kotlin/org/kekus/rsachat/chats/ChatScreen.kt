@@ -53,7 +53,7 @@ fun ChatScreen(
                 reverseLayout = true,
                 verticalArrangement = Arrangement.Bottom
             ) {
-                items(messages, key = { it.id }) { message ->
+                items(messages.reversed(), key = { it.id }) { message ->
                     MessageBubble(
                         message = message,
                         onLongPress = { menuForMessage = message }
