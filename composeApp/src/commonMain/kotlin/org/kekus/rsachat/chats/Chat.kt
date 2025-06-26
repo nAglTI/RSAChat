@@ -6,3 +6,12 @@ data class Chat(
     val title: String,
     val lastMessage: String
 )
+
+/** Simple chat message model. */
+data class ChatMessage(
+    val id: Long,
+    val authorId: Long,
+    val authorName: String,
+    val text: String,
+    val isMine: Boolean
+)

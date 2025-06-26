@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ChatBubble
 import androidx.compose.material.icons.filled.MoreVert
@@ -19,6 +20,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun ChatListScreen(
     onOpenSettings: () -> Unit,
+    onOpenChat: (Chat) -> Unit,
     viewModel: ChatListViewModel = remember { ChatListViewModel() }
 ) {
     val chats by viewModel.chats.collectAsState()
@@ -68,7 +70,8 @@ fun ChatListScreen(
             items(chats) { chat ->
                 ListItem(
                     headlineContent = { Text(chat.title) },
-                    supportingContent = { Text(chat.lastMessage) }
+                    supportingContent = { Text(chat.lastMessage) },
+                    modifier = Modifier.clickable { onOpenChat(chat) }
                 )
                 HorizontalDivider(Modifier, DividerDefaults.Thickness, DividerDefaults.color)
             }

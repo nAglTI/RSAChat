@@ -60,6 +60,10 @@ class RootComponent(
         navigation.bringToFront(Screen.Settings)
     }
 
+    fun openChat(chat: chats.Chat) {
+        navigation.bringToFront(Screen.Chat(chat))
+    }
+
     fun openChangePassword() {
         navigation.bringToFront(Screen.ChangePassword)
     }

@@ -7,6 +7,7 @@ import androidx.compose.runtime.remember
 import com.arkivanov.decompose.extensions.compose.subscribeAsState
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.kekus.rsachat.chats.ChatListScreen
+import org.kekus.rsachat.chats.ChatScreen
 import org.kekus.rsachat.auth.PasswordScreen
 import org.kekus.rsachat.settings.ChangePasswordScreen
 import org.kekus.rsachat.settings.SettingsScreen
@@ -22,7 +23,17 @@ fun App() {
     MaterialTheme {
         when (screen) {
             Screen.Password -> PasswordScreen(onSubmit = component::tryUnlock)
-            Screen.ChatList -> ChatListScreen(onOpenSettings = component::openSettings)
+            Screen.ChatList -> ChatListScreen(
+                onOpenSettings = component::openSettings,
+                onOpenChat = component::openChat
+            )
+            is Screen.Chat -> ChatScreen(
+                chat = screen.chat,
+                onBack = component::back,
+                onForward = {},
+                onReply = {},
+                onDelete = {}
+            )
             Screen.Settings -> {
                 SettingsScreen(
                     onBack = component::back,

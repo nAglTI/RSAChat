@@ -7,6 +7,8 @@ sealed class Screen {
 
     object ChatList : Screen()
 
+    data class Chat(val chat: chats.Chat) : Screen()
+
     object Settings : Screen()
 
     object ChangePassword : Screen()
